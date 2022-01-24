@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hello</title>
+  <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: rgb(17,28,48); 
+        color: white;
+      }
+
+      /*.header {
+        display: flex;
+        background: red;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        height: 35vh;
+      }*/
+
+      .color {
+        background: #A1C9F1;
+        color: black;
+      }
+
+      .xoc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 30px;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+        height: 45vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        margin-top: 20px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: calc(50vw - 48px);
+        margin-right: calc(50vw - 48px);
+      }
+
+      img {
+        max-height: 80%;
+        max-width: 30%;
+      }
+  </style>
+  <script>
+    function randomize() {
+          const images = ["assets/1-cop.jpg", "assets/2-bau.jpg", "assets/3-ga.jpg", "assets/4-tom.jpg", "assets/5-ca.jpg", "assets/6-cua.jpg"]
+          const img = document.getElementById('img1')
+          const img1 = document.getElementById('img2')
+          const img2 = document.getElementById('img3')
+
+
+          const interval = setInterval(() => {
+                img.src = images[Math.floor(Math.random() * 6)]
+                img1.src = images[Math.floor(Math.random() * 6)]
+                img2.src = images[Math.floor(Math.random() * 6)]
+
+          }, 30)
+
+          setTimeout(() => clearInterval(interval), 1000)
+    }
+
+  </script>
+  </head>
+  <body>
+    <div class="bg-slate-900 text-yellow-500 flex flex-col items-center justify-center gap-16 h-[35vh]">
+      <h1 class="text-3xl">Bầu Cua</h1>
+      <h3 class="text-xl">Thắng bại tại hên xui</h3>
+    </div>
+    <div class="xoc rounded-xl bg-slate-700" id="container">
+      <img class="rounded-lg" src="assets/1-cop.jpg" id="img1">
+      <img class="rounded-lg" src="assets/1-cop.jpg" id="img2">
+      <img class="rounded-lg" src="assets/1-cop.jpg" id="img3">
+    </div>
+    <button class="btn bg-red-500 hover:bg-red-400 active:bg-red-600 focus:outline-none focus:ring focus:ring-red-300 rounded-full drop-shadow-2xl" onclick="randomize()">Xóc</button>
+  </body>
+</html>

@@ -119,3 +119,9 @@
   .control:first-child {
     border-left: none;
   }
+
+  .audio-btn {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+  }

@@ -203,3 +203,14 @@ document.addEventListener("click", function()
     };
     animation.animate();
   })();
+
+  
+const audio = document.getElementById('audio')
+const btnAudio = document.querySelector('.audio-btn')
+
+function loadSong() {
+  audio.play()
+}
+btnAudio.addEventListener('click', function() {
+  loadSong()
+})
